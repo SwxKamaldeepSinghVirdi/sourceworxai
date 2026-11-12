@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactElement } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import {
@@ -403,7 +404,7 @@ function TrustWorxLogoIcon({ className = "h-8 w-8" }: { className?: string }) {
 }
 
 export default function HomePage() {
-  const logobyPillar: Record<string, (p: { className?: string }) => JSX.Element> = {
+  const logobyPillar: Record<string, (p: { className?: string }) => ReactElement> = {
     GrowthWorx: GrowthWorxLogoIcon,
     FlowWorx: FlowWorxLogoIcon,
     TrustWorx: TrustWorxLogoIcon,

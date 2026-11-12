@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, Target, Compass, ShieldCheck, Zap } from "lucide-react";
+import { Check, Target, Compass, ShieldCheck, Zap } from "lucide-react";
 import { PROOF_TILES } from "@/data/site-content";
 import { ClosingCta } from "@/components/ClosingCta";
 
