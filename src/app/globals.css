@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-poppins), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --color-ink: #0A142E;
+  --color-ink-soft: #132043;
+  --color-teal: #48B8A8;
+  --color-teal-deep: #157A68;
+  --color-teal-tint: #E6F5F2;
+  --color-flow: #5B8DEF;
+  --color-flow-deep: #2F5FC4;
+  --color-flow-tint: #EDF3FE;
+  --color-flow-dark: #0A1636;
+  --color-trust: #8B7BFF;
+  --color-trust-deep: #5B46C9;
+  --color-trust-tint: #F1EFFE;
+  --color-singularity: #0A111E;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #0A142E;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  :focus-visible {
+    outline: 2px solid #48B8A8;
+    outline-offset: 2px;
+  }
+}
+
+/* Subtle architectural grid background for precision sections */
+.bg-arch-grid {
+  background-image:
+    linear-gradient(to right, rgba(10, 20, 46, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 20, 46, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-arch-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
