@@ -113,8 +113,9 @@ const CSS = `
 }
 .sw-proof-tile:hover { transform: translateX(4px); }
 .sw-proof-tile__figure {
-  font-size: 2.25rem; font-weight: 800; letter-spacing: -.04em; color: var(--ink); line-height: 1;
+  font-size: 1.75rem; font-weight: 800; letter-spacing: -.04em; color: var(--ink); line-height: 1;
 }
+@media (min-width: 640px) { .sw-proof-tile__figure { font-size: 2.25rem; } }
 .sw-proof-tile__label {
   margin-top: .5rem; font-size: .85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em;
 }
@@ -144,8 +145,9 @@ const CSS = `
 .sw-vm-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.5rem; }
 @media (min-width: 768px) { .sw-vm-grid { grid-template-columns: repeat(2, 1fr); } }
 .sw-vm-card {
-  border-radius: 24px; padding: 3rem 2.5rem; position: relative; overflow: hidden;
+  border-radius: 24px; padding: 2rem 1.5rem; position: relative; overflow: hidden;
 }
+@media (min-width: 640px) { .sw-vm-card { padding: 3rem 2.5rem; } }
 .sw-vm-card--dark {
   background: linear-gradient(135deg, #0B1B36 0%, #13294B 100%); color: #fff;
   border: 1px solid rgba(255,255,255,0.1);

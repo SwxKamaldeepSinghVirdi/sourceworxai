@@ -119,8 +119,12 @@ const CSS = `
   color: transparent;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  white-space: nowrap; 
   animation: shimmerText 7s linear infinite;
+}
+@media (min-width: 640px) {
+  .shimmer-teal {
+    white-space: nowrap;
+  }
 }
 
 .lift {
@@ -174,7 +178,7 @@ const CSS = `
 }
 
 .sw-h2 {
-  margin-top: 1.25rem; font-size: clamp(2rem, 3.5vw, 2.85rem);
+  margin-top: 1.25rem; font-size: clamp(1.75rem, 3.5vw, 2.85rem);
   line-height: 1.08; letter-spacing: -.035em; font-weight: 800; color: var(--ink);
 }
 .sw-h2 em { font-style: normal; color: var(--teal); }
@@ -198,13 +202,14 @@ const CSS = `
 /* Pillars */
 .sw-pillars { display: grid; gap: 1.5rem; }
 .sw-pillar-card {
-  position: relative; display: flex; flex-direction: column; padding: 2.25rem;
+  position: relative; display: flex; flex-direction: column; padding: 1.5rem;
   border-radius: 20px; overflow: hidden;
   background: var(--bg-white);
   border: 1px solid var(--rule);
   box-shadow: 0 4px 20px -5px rgba(11, 27, 54, 0.03);
   transition: transform .5s cubic-bezier(.16,1,.3,1), border-color .4s, box-shadow .4s;
 }
+@media (min-width: 640px) { .sw-pillar-card { padding: 2.25rem; } }
 .sw-pillar-card:hover {
   transform: translateY(-4px);
   border-color: var(--c);
@@ -245,9 +250,10 @@ const CSS = `
 
 /* Callout */
 .sw-callout {
-  position: relative; margin-top: 2.5rem; padding: 2.5rem; border-radius: 20px;
+  position: relative; margin-top: 2.5rem; padding: 1.5rem; border-radius: 20px;
   background: var(--ink); color: #E2E8F0; box-shadow: 0 20px 40px -10px rgba(11, 27, 54, 0.2); overflow: hidden;
 }
+@media (min-width: 640px) { .sw-callout { padding: 2.5rem; } }
 .sw-callout::before {
   content: "360°"; position: absolute; right: -1rem; bottom: -3rem;
   font-size: 9rem; font-weight: 900; letter-spacing: -.06em; color: var(--cyan); opacity: 0.08;
@@ -271,11 +277,12 @@ const CSS = `
 @media (min-width: 1024px) { .sw-app-grid { grid-template-columns: repeat(3, 1fr); } }
 
 .sw-app-card {
-  background: var(--bg-white); border: 1px solid var(--rule); border-radius: 16px; padding: 2rem;
+  background: var(--bg-white); border: 1px solid var(--rule); border-radius: 16px; padding: 1.5rem;
   display: flex; flex-direction: column; transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s;
 }
+@media (min-width: 640px) { .sw-app-card { padding: 2rem; } }
 .sw-app-card:hover { transform: translateY(-4px); box-shadow: 0 16px 30px -10px rgba(0, 178, 255, 0.1); border-color: var(--rule-strong); }
-.sw-app-card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem; }
+.sw-app-card__top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 0.5rem 1rem; margin-bottom: 1.5rem; }
 .sw-app-card__industry { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .65rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); }
 .sw-app-card__status { 
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .6rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; 
@@ -293,8 +300,10 @@ const CSS = `
 .sw-month-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 3rem; }
 @media (min-width: 768px) { .sw-month-grid { grid-template-columns: repeat(3, 1fr); } }
 
-.sw-month-card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 16px; padding: 2rem; position: relative; box-shadow: 0 4px 20px -5px rgba(11, 27, 54, 0.03); }
-.sw-month-card::before { content: ""; position: absolute; top: 0; left: 2rem; right: 2rem; height: 3px; background: var(--rule-strong); border-radius: 0 0 3px 3px; transition: background .3s; }
+.sw-month-card { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 16px; padding: 1.5rem; position: relative; box-shadow: 0 4px 20px -5px rgba(11, 27, 54, 0.03); }
+@media (min-width: 640px) { .sw-month-card { padding: 2rem; } }
+.sw-month-card::before { content: ""; position: absolute; top: 0; left: 1.5rem; right: 1.5rem; height: 3px; background: var(--rule-strong); border-radius: 0 0 3px 3px; transition: background .3s; }
+@media (min-width: 640px) { .sw-month-card::before { left: 2rem; right: 2rem; } }
 .sw-month-card:hover::before { background: var(--cyan); }
 .sw-month-card__month { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--cyan); }
 .sw-month-card__title { font-size: 1.25rem; font-weight: 800; color: var(--ink); margin-top: .5rem; margin-bottom: 1.5rem; }
@@ -303,20 +312,22 @@ const CSS = `
 .sw-month-card__item svg { flex-shrink: 0; margin-top: .15rem; width: 1.1rem; height: 1.1rem; color: var(--teal); }
 
 .sw-execution-box { background: var(--bg-white); border: 1px solid var(--rule); border-radius: 20px; overflow: hidden; box-shadow: 0 12px 40px -15px rgba(0,178,255,0.1); }
-.sw-execution-head { display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid var(--rule); padding: 2rem; background: var(--bg-base); }
-@media (min-width: 640px) { .sw-execution-head { flex-direction: row; align-items: flex-end; justify-content: space-between; } }
+.sw-execution-head { display: flex; flex-direction: column; gap: 1rem; border-bottom: 1px solid var(--rule); padding: 1.5rem; background: var(--bg-base); }
+@media (min-width: 640px) { .sw-execution-head { flex-direction: row; align-items: flex-end; justify-content: space-between; padding: 2rem; } }
 .sw-execution-badge {
   display: inline-flex; align-items: center; gap: .5rem; padding: .5rem 1rem;
   background: var(--bg-white); border: 1px solid var(--rule-strong); border-radius: 99px;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink);
   box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  align-self: flex-start;
 }
 
 .sw-execution-grid { display: grid; grid-template-columns: 1fr; gap: 1px; background: var(--rule); }
 @media (min-width: 640px) { .sw-execution-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .sw-execution-grid { grid-template-columns: repeat(4, 1fr); } }
 
-.sw-execution-node { background: var(--bg-white); padding: 2rem; display: flex; flex-direction: column; transition: background .3s; }
+.sw-execution-node { background: var(--bg-white); padding: 1.5rem; display: flex; flex-direction: column; transition: background .3s; }
+@media (min-width: 640px) { .sw-execution-node { padding: 2rem; } }
 .sw-execution-node:hover { background: var(--bg-base); }
 .sw-execution-node__icon { width: 2.5rem; height: 2.5rem; border-radius: 10px; background: var(--bg-base); border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; color: var(--c); margin-bottom: 1.25rem; transition: transform .3s; }
 .sw-execution-node:hover .sw-execution-node__icon { transform: scale(1.1); border-color: var(--c); }
@@ -327,9 +338,10 @@ const CSS = `
 .sw-principles { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
 @media (min-width: 640px) { .sw-principles { grid-template-columns: repeat(2, 1fr); } }
 .sw-principle { 
-  padding: 2.25rem; border-radius: 16px; background: var(--bg-white); border: 1px solid var(--rule); 
+  padding: 1.5rem; border-radius: 16px; background: var(--bg-white); border: 1px solid var(--rule); 
   transition: all .4s cubic-bezier(.16,1,.3,1); position: relative; overflow: hidden;
 }
+@media (min-width: 640px) { .sw-principle { padding: 2.25rem; } }
 .sw-principle::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--cyan); opacity: 0; transition: opacity .4s; }
 .sw-principle:hover { border-color: var(--rule-strong); box-shadow: 0 10px 30px -10px rgba(0, 178, 255, 0.08); transform: translateY(-2px); }
 .sw-principle:hover::before { opacity: 1; }
@@ -447,7 +459,7 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h1 className="mt-4 text-[44px] font-extrabold leading-[1.05] tracking-tight text-[#0b1b36] sm:text-5xl lg:text-[52px]">
+              <h1 className="mt-4 text-[36px] font-extrabold leading-[1.08] tracking-tight text-[#0b1b36] sm:text-5xl lg:text-[52px] sm:leading-[1.05]">
                 <span className="hero-word block" style={{ animationDelay: "90ms" }}>
                   Grow with AI.
                 </span>

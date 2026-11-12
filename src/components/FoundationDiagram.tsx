@@ -57,7 +57,7 @@ export function FoundationDiagram() {
             <p className="mt-1 text-sm font-semibold text-white">
               Identity, policy, routing, verification &amp; audit
             </p>
-            <div className="mt-4 grid grid-cols-5 gap-1.5">
+            <div className="mt-4 grid grid-cols-2 gap-1.5 sm:grid-cols-5">
               {LOOP_NODES.map((node, idx) => (
                 <motion.div
                   key={node}
@@ -76,7 +76,7 @@ export function FoundationDiagram() {
                 </motion.div>
               ))}
             </div>
-            <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-3 font-mono text-[10px] text-slate-300">
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-white/10 pt-3 font-mono text-[10px] text-slate-300">
               <span>Policy in-path</span>
               <span>Model router</span>
               <span>Lineage log</span>

@@ -25,12 +25,14 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
   }
 
   body {
     background-color: #FFFFFF;
     color: #0A142E;
     font-family: var(--font-sans);
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {

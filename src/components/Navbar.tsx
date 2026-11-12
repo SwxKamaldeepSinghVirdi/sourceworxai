@@ -296,7 +296,7 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="overflow-hidden border-t border-[#DCEFED] bg-white text-ink lg:hidden"
           >
-            <div className="max-h-[calc(100vh-4rem)] space-y-6 overflow-y-auto px-4 py-6 sm:px-6">
+            <div className="max-h-[calc(100dvh-5rem)] space-y-6 overflow-y-auto px-4 py-6 sm:px-6">
               <div className="grid grid-cols-2 gap-2 text-sm">
                 <Link
                   href="/"

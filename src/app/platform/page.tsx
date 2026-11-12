@@ -354,7 +354,7 @@ export default function PlatformPage() {
               className="sw-blur-in mt-16 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02]"
               style={{ animationDelay: "540ms" }}
             >
-              <div className="flex items-stretch divide-x divide-white/[0.06]">
+              <div className="flex flex-col divide-y divide-white/[0.06] sm:flex-row sm:items-stretch sm:divide-x sm:divide-y-0">
                 {BUILD_OFFERS.map((offer, i) => (
                   <div key={offer.short} className="flex-1 px-4 py-5 sm:px-6">
                     <div className="flex items-center gap-2">

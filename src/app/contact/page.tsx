@@ -82,7 +82,7 @@ const CSS = `
 /* ── headline ──────────────────────────────────────────── */
 .sw-h1{
   margin-top:1.5rem;
-  font-size:clamp(2.6rem,6.2vw,4.75rem);
+  font-size:clamp(2.25rem,6.2vw,4.75rem);
   line-height:.96;letter-spacing:-.035em;font-weight:700;
 }
 .sw-line{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
@@ -215,7 +215,7 @@ const CSS = `
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
   font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:#8A93A3;
 }
-.sw-frame__body{padding:1.75rem 1.5rem 2rem}
+.sw-frame__body{padding:1.25rem 1rem 1.5rem}
 @media (min-width:640px){.sw-frame__head{padding:1.1rem 2rem}.sw-frame__body{padding:2.25rem 2rem 2.5rem}}
 
 .sw-skel{display:grid;gap:1.25rem;padding-top:.5rem}
@@ -228,9 +228,10 @@ const CSS = `
 }
 .sw-form :where(input,textarea,select){
   width:100%;background:transparent;border:0;border-bottom:1px solid var(--rule);
-  border-radius:0;padding:.6rem 0;font-size:.95rem;color:var(--ink);
+  border-radius:0;padding:.6rem 0;font-size:1rem;color:var(--ink);
   transition:border-color .3s,box-shadow .3s;
 }
+@media (min-width:640px){.sw-form :where(input,textarea,select){font-size:.95rem}}
 .sw-form :where(input,textarea,select):focus{
   outline:none;border-bottom-color:var(--teal);box-shadow:0 1px 0 0 var(--teal);
 }
