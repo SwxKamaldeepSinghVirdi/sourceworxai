@@ -74,7 +74,7 @@ export function ContactForm() {
       setCountry("");
       setMessage("");
     } catch {
-      setError("Network error while sending request. Please email hello@sourceworx.ai.");
+      setError("Network error while sending request. Please email reachout@sourceworx.ai.");
     } finally {
       setSubmitting(false);
     }

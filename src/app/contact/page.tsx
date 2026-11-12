@@ -380,10 +380,10 @@ export default function ContactPage() {
                         <dt>Email</dt>
                         <dd>
                           <a
-                            href="mailto:hello@sourceworx.ai"
+                            href="mailto:reachout@sourceworx.ai"
                             className="sw-link"
                           >
-                            hello@sourceworx.ai
+                            reachout@sourceworx.ai
                           </a>
                         </dd>
                       </div>

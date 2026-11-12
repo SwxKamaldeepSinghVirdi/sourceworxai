@@ -69,7 +69,7 @@ export default function RootLayout({
               name: "SourceWorx AI",
               alternateName: "SourceWorx",
               url: "https://www.sourceworx.ai/",
-              email: "hello@sourceworx.ai",
+              email: "reachout@sourceworx.ai",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Noida",
@@ -82,7 +82,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col bg-white font-sans text-slate-900 antialiased">
         
-        {/* TOP BAR (From Screenshot) */}
+        {/* TOP BAR */}
         <div className="bg-[#0b1b36] text-white text-[11px] font-medium py-2 px-4 hidden md:block">
           <div className="mx-auto max-w-7xl flex justify-between items-center">
             <div className="flex items-center gap-2">
@@ -91,12 +91,8 @@ export default function RootLayout({
               <span className="text-teal-400">GrowthWorx • FlowWorx • TrustWorx</span>
             </div>
             <div className="flex items-center gap-4">
-              <a href="tel:+14156297350" className="flex items-center gap-1.5 hover:text-teal-400 transition-colors">
-                <span className="text-slate-400">📞</span> +1 (415) 629-7350
-              </a>
-              <span className="text-slate-500">|</span>
-              <a href="mailto:sales@sourceworx.ai" className="flex items-center gap-1.5 hover:text-teal-400 transition-colors">
-                <span className="text-slate-400">✉️</span> sales@sourceworx.ai
+              <a href="mailto:reachout@sourceworx.ai" className="flex items-center gap-1.5 hover:text-teal-400 transition-colors">
+                <span className="text-slate-400">✉️</span> reachout@sourceworx.ai
               </a>
             </div>
           </div>
